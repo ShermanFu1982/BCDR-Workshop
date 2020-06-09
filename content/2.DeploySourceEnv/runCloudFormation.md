@@ -11,6 +11,8 @@ weight: 21
 
 2.打开北京region的CloudFormation console：https://console.amazonaws.cn/cloudformation/home?region=cn-north-1#/stacks/create/template
 
+请在consolo的右上角留意一下，是在北京的region。如果不是通过点击上述URL到达cloudformation，而是通过其他途径来到这里，有可能被领进了宁夏region。在宁夏region进行下列操作会导致资源创建失败，报错ami不存在。
+
 在模板源里选择"上传模板文件"
 
 在【选择文件】按钮里，选择在之前下载的模板文件：workshop_local.yaml。
