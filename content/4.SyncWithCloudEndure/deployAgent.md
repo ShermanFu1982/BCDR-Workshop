@@ -43,7 +43,9 @@ weight: 41
 6.在本地数据中心的应用服务器里安装agent。打开北京region的EC2控制台：https://console.amazonaws.cn/ec2/v2/home?region=cn-north-1#Instances:tag:Name=Basion,APP;sort=launchTime
 
 找到应用服务器的私有IP地址，然后remote desktop登录到堡垒机，把local-idc-key.pem文件拷贝到堡垒机的WorkShopTools目录下(在本地电脑里选中local-idc-key.pem文件并ctrl+c，然后鼠标点中WorkShopTools目录并ctrl+v即可完成拷贝)。
-打开xshell，选择"local-idc-env"，点击"属性"菜单，在弹出界面上，把应用服务器的私有IP地址拷贝到"主机(H)"一栏。
+打开xshell，可能会因为xshell的版本问题遇到被强制更新的问题，此处无法跳过，自动更新可能会耗时比较长，轻耐心等待完成。
+
+选择"local-idc-env"，点击"属性"菜单，在弹出界面上，把应用服务器的私有IP地址拷贝到"主机(H)"一栏。
 ![](/images/SyncWithCloudEndure/inputSourceIP.png)
 
 然后在右侧选择"用户身份验证"，再点击左侧的【浏览(B)...】按钮，并在弹出的窗口上，点击【导入(I)...】按钮，
