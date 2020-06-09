@@ -47,6 +47,9 @@ https://console.amazonaws.cn/ec2/v2/home?region=cn-north-1#Instances:tag:Name=Ba
 ![](/images/CreateSourceEnv/editDBConnection2.png)
 
 双击"local-idc-env"，然后在Query 1里输入下面的SQL，注意把下面的"Wordpress服务器的私有IP地址"改为你在第1步中记录的私有IP地址。
+
+踩坑预警：下面的SQL中注意把下面的"Wordpress服务器的私有IP地址"改为你在第1步中记录的私有IP地址，切勿直接复制执行。
+
 ```bash
 UPDATE wp_options SET option_value = REPLACE(option_value, 'localhost', 'Wordpress服务器的私有IP地址') WHERE option_name = 'home' OR option_name = 'siteurl';
 UPDATE wp_posts SET post_content = REPLACE(post_content, 'localhost', 'Wordpress服务器的私有IP地址');
